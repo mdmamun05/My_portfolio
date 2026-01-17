@@ -64,8 +64,8 @@ const Home = () => {
             <div className="h-[1px] w-12 bg-white/10"></div>
             <div className="flex gap-5 text-2xl text-slate-400">
               <motion.a whileHover={{ y: -5, color: '#fff' }} href="https://github.com/mdmamun05" target="_blank"><FaGithub /></motion.a>
-              <motion.a whileHover={{ y: -5, color: '#3b82f6' }} href="#"><FaLinkedin /></motion.a>
-              <motion.a whileHover={{ y: -5, color: '#1877f2' }} href="#"><FaFacebook /></motion.a>
+              <motion.a whileHover={{ y: -5, color: '#3b82f6' }} href="https://linkedin.com/in/abdullah-al-mamun-526556237"><FaLinkedin /></motion.a>
+              <motion.a whileHover={{ y: -5, color: '#1877f2' }} href="https://facebook.com/profile.php?id=61579446690945"><FaFacebook /></motion.a>
               <motion.a whileHover={{ y: -5, color: '#06b6d4' }} href="#"><FaExternalLinkAlt /></motion.a> {/* Netlify/Website icon */}
             </div>
           </div>

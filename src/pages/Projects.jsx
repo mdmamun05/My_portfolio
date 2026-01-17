@@ -1,49 +1,81 @@
+import { motion } from 'framer-motion';
+import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
+
 const Projects = () => {
   const allProjects = [
     {
-      title: "Sorting Visualizer",
-      desc: "A high-performance tool built with C++ and React to visualize complex algorithms.",
-      tech: ["React", "C++", "Algorithms"],
-      link: "#"
+      id: 1,
+      title: "E-Commerce App",
+      desc: "A full-stack online shop built with React and Tailwind CSS.",
+      tech: ["React", "Firebase", "Tailwind"],
+      link: "#",
+      github: "#"
     },
     {
-      title: "Secure E-Vault",
-      desc: "A decentralized storage application focusing on data privacy and security.",
-      tech: ["Node.js", "Firebase", "Tailwind"],
-      link: "#"
+      id: 2,
+      title: "Problem Solver Tool",
+      desc: "A platform to visualize and solve C++ algorithms effectively.",
+      tech: ["C++", "Data Structures", "Web"],
+      link: "#",
+      github: "#"
     },
     {
-      title: "AI Pathfinding",
-      desc: "Interactive visualizer for A* and Dijkstra algorithms in a 2D grid.",
-      tech: ["JavaScript", "Canvas API"],
-      link: "#"
+      id: 3,
+      title: "Modern Portfolio",
+      desc: "An ultra-minimalist developer portfolio with smooth animations.",
+      tech: ["Vite", "Framer Motion", "Tailwind"],
+      link: "#",
+      github: "#"
     }
   ];
 
   return (
-    <div className="max-w-7xl mx-auto px-6 py-20">
-      <div className="mb-16">
-        <h2 className="text-sm font-bold tracking-[0.3em] text-blue-500 mb-4 uppercase">Selected Works</h2>
-        <h1 className="text-4xl md:text-6xl font-black">Crafting Digital <br /> <span className="text-slate-500 text-3xl md:text-5xl">Masterpieces</span></h1>
-      </div>
+    <motion.div 
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      className="min-h-screen pt-24 pb-12 px-6"
+    >
+      <div className="max-w-7xl mx-auto">
+        <h2 className="text-5xl font-black mb-12 bg-gradient-to-r from-blue-400 to-emerald-400 bg-clip-text text-transparent">
+          Selected Works
+        </h2>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {allProjects.map((project, index) => (
-          <div key={index} className="group relative bg-slate-800/30 border border-white/5 p-8 rounded-3xl hover:bg-slate-800/50 transition-all duration-500 hover:-translate-y-2">
-            <div className="absolute top-8 right-8 text-blue-500 opacity-0 group-hover:opacity-100 transition-opacity">
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
-            </div>
-            <h3 className="text-2xl font-bold mb-4">{project.title}</h3>
-            <p className="text-slate-400 mb-8 leading-relaxed">{project.desc}</p>
-            <div className="flex flex-wrap gap-2">
-              {project.tech.map((t, i) => (
-                <span key={i} className="text-[10px] font-bold tracking-widest uppercase bg-blue-500/10 text-blue-400 px-3 py-1 rounded-full border border-blue-500/20">{t}</span>
-              ))}
-            </div>
-          </div>
-        ))}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {allProjects.map((project) => (
+            <motion.div 
+              key={project.id}
+              whileHover={{ y: -10 }}
+              className="bg-slate-900/50 backdrop-blur-xl border border-white/5 p-8 rounded-[2.5rem] hover:border-blue-500/30 transition-all group"
+            >
+              <div className="flex justify-between items-start mb-6">
+                <div className="h-12 w-12 bg-blue-500/10 rounded-2xl flex items-center justify-center text-blue-400 font-bold">
+                  0{project.id}
+                </div>
+                <div className="flex gap-4 text-xl text-slate-400">
+                  <a href={project.github} className="hover:text-white transition-colors"><FaGithub /></a>
+                  <a href={project.link} className="hover:text-white transition-colors"><FaExternalLinkAlt /></a>
+                </div>
+              </div>
+
+              <h3 className="text-2xl font-bold mb-3 group-hover:text-blue-400 transition-colors">
+                {project.title}
+              </h3>
+              <p className="text-slate-400 mb-6 line-clamp-2">
+                {project.desc}
+              </p>
+
+              <div className="flex flex-wrap gap-2 mt-auto">
+                {project.tech.map((t, i) => (
+                  <span key={i} className="text-[10px] font-bold tracking-widest uppercase bg-white/5 px-3 py-1 rounded-full text-slate-300">
+                    {t}
+                  </span>
+                ))}
+              </div>
+            </motion.div>
+          ))}
+        </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
