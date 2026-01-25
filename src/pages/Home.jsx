@@ -7,13 +7,13 @@ const Home = () => {
   return (
     <div className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
       
-      {/* ১. ব্যাকগ্রাউন্ড অ্যানিমেটেড গ্লো */}
+      {/* ১. background animated glow */}
       <div className="absolute top-1/4 -left-20 w-72 h-72 bg-blue-600 rounded-full mix-blend-multiply filter blur-[128px] opacity-20 animate-pulse"></div>
       <div className="absolute bottom-1/4 -right-20 w-96 h-96 bg-cyan-500 rounded-full mix-blend-multiply filter blur-[128px] opacity-20 animate-pulse delay-700"></div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
         
-        {/* বাম পাশ: কন্টেন্ট এবং সোশ্যাল আইকন */}
+        {/* Left Side: Content and Social Media Icon */}
         <motion.div 
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
@@ -39,12 +39,12 @@ const Home = () => {
             I'm Mamun, a full-stack developer with a passion for turning complex logic into intuitive and visually appealing user interfaces. 
           </p>
 
-          {/* বাটন সেকশন: Resume & Let's Talk */}
+          {/* Button Section: Resume & Let's Talk */}
           <div className="flex flex-wrap gap-6 mb-12">
             <motion.a 
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              href="/resume.pdf" 
+              href="doc/Resume.pdf" 
               target="_blank"
               className="px-8 py-4 bg-white text-black font-bold rounded-2xl shadow-lg shadow-white/5 tracking-widest"
             >
@@ -58,7 +58,7 @@ const Home = () => {
             </motion.div>
           </div>
 
-          {/* সোশ্যাল আইকন অ্যানিমেশনসহ */}
+          {/* Social Media Icon with animation */}
           <div className="flex gap-6 items-center">
             <p className="text-xs font-bold tracking-[0.2em] text-slate-500 uppercase">Follow Me</p>
             <div className="h-[1px] w-12 bg-white/10"></div>
@@ -71,14 +71,14 @@ const Home = () => {
           </div>
         </motion.div>
 
-        {/* ডান পাশ: আপনার ছবি এবং কোটেশন */}
+        {/* Right Side: Picture & cotation */}
         <motion.div 
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1 }}
           className="flex flex-col items-center justify-center"
         >
-          {/* ইমেজ কার্ড */}
+          {/* Image Card */}
           <div className="relative group">
             <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 to-cyan-400 rounded-[3rem] blur opacity-30 group-hover:opacity-60 transition duration-1000"></div>
             <div className="relative w-64 h-80 md:w-80 md:h-[450px] bg-slate-800 rounded-[3rem] overflow-hidden border border-white/10">

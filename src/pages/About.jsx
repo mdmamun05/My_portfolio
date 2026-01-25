@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { SiCplusplus, SiJavascript, SiReact, SiTailwindcss, SiFirebase, SiGithub } from 'react-icons/si';
+import { SiCplusplus, SiJavascript, SiReact, SiTailwindcss, SiFirebase, SiGithub, SiMysql } from 'react-icons/si';
 
 const About = () => {
   const skills = [
@@ -7,7 +7,7 @@ const About = () => {
   { name: "JavaScript", icon: <SiJavascript />, color: "text-yellow-400" },
   { name: "React", icon: <SiReact />, color: "text-cyan-400" },
   { name: "Tailwind", icon: <SiTailwindcss />, color: "text-teal-400" },
-  { name: "Firebase", icon: <SiFirebase />, color: "text-orange-500" },
+  { name: "SQL", icon: <SiMysql />, color: "text-orange-500" },
   { name: "GitHub", icon: <SiGithub />, color: "text-white" },
 ];
 
@@ -32,7 +32,7 @@ const About = () => {
             Hi, I'm <span className="text-white font-bold">MD MAMUN</span>. I am a passionate developer with a strong foundation in competitive programming and web technologies. 
           </p>
           <p className="text-slate-400 text-lg leading-relaxed mb-6">
-            আমার যাত্রা শুরু হয়েছিল লজিক বিল্ডিং এবং প্রবলেম সলভিং দিয়ে। এখন আমি মডার্ন এবং স্কেলেবল ওয়েব অ্যাপ্লিকেশন তৈরিতে কাজ করছি। আমি সবসময় নতুন টেকনোলজি শিখতে এবং সেগুলোকে বাস্তব জীবনে প্রয়োগ করতে পছন্দ করি।
+            My journey began with a focus on logic building and problem-solving. Today, I specialize in crafting modern and scalable web applications. I am a lifelong learner, dedicated to exploring new technologies and applying them to solve real-world challenges.
           </p>
           
           <div className="p-6 bg-slate-900/50 border border-white/5 rounded-3xl">
